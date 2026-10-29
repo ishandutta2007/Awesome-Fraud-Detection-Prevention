@@ -2,7 +2,15 @@
   <img src="./assets/banner.svg" alt="Awesome Fraud Detection and Prevention Banner" width="100%" />
 </p>
 
-# 🛡️ Awesome Fraud Detection & Prevention [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+# 🛡️ Awesome Fraud Detection & Prevention
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
+  <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 > 🔍 A comprehensive, curated catalog of top-tier **SaaS fraud prevention platforms** and **open-source fraud detection engines**, spanning chargeback guarantees, transaction risk scoring, AML screening, behavioral biometrics, and machine learning fraud architectures.
 
@@ -19,6 +27,8 @@
   - [🛡️ Security & Abuse Frameworks](#-security--abuse-frameworks)
 - [⚖️ Architectural Comparison: SaaS Network Effects vs. Open Source](#-architectural-comparison-saas-network-effects-vs-open-source)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
 - [⚠️ Disclaimer](#️-disclaimer)
 
 ---
@@ -122,6 +132,23 @@ Contributions are warmly welcomed! Please follow these steps to keep the list hi
 2. 🌿 Create a descriptive feature branch (`git checkout -b feat/add-new-fraud-tool`).
 3. 📝 Update `README.md` maintaining consistent markdown formatting, star links, and factual pricing/scale specifications.
 4. 🚀 Submit a Pull Request with a short summary of the project's utility and license.
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you so much for exploring and using this project! If you found this curated ecosystem helpful in designing your payment protection or fraud detection architecture, please consider showing your support:
+
+* ⭐ **Star the repository** to boost discoverability for other developers and fraud teams.
+* 🍴 **Fork and share** the project with your colleagues and network.
+* ☕ **Buy me a coffee / Sponsor the author**: Support continuous updates and new curated ecosystems by visiting the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+Your backing and encouragement are deeply appreciated!
+
+---
+
+##  Star History
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Fraud-Detection-Prevention&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Fraud-Detection-Prevention&type=date&legend=top-left)
 
 ---
 
