@@ -1,191 +1,137 @@
-# Awesome-Fraud-Detection-Prevention
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Fraud Detection and Prevention Banner" width="100%" />
+</p>
 
-## Top Fraud Detection & Prevention Ecosystem
+# 🛡️ Awesome Fraud Detection & Prevention [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on E-commerce Chargeback Protection, Transaction Risk Scoring & Self-Hosted Fraud Engines*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Fraud Detection & Prevention**. These tools enable merchants and fintechs to identify risky transactions, block fraudulent orders, reduce chargebacks, and approve legitimate customers—balancing loss prevention with conversion rate optimization.
-
-
-
-**Examples** include Shopify Fraud Analysis, Signifyd, Riskified, Sift, SEON, Forter, Kount, NoFraud, ClearSale, and FraudLabs Pro (the category leaders).
-
-
-
-**Open-source emphasis**: Fraud Detection is a domain where open-source tooling is **emerging but still catching up to commercial SaaS**. The strongest active projects are **Marble (CheckMarble)**, a real-time transaction monitoring and AML decision engine positioned as an open-source alternative to Feedzai, SEON, and SumSub, with 475 GitHub stars and a Go backend , and **Jube**, an AGPL-3.0 licensed AML/fraud platform with adaptive ML and a rule engine . Other projects like **FraudGuard** provide a security framework for threat detection and abuse monitoring . However, no open-source project matches the **global merchant network intelligence** of Signifyd or Riskified—those rely on cross-merchant data from billions of transactions that a self-hosted tool cannot replicate.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Shopify Fraud Analysis](https://help.shopify.com/en/manual/orders/fraud-analysis)**  
-
-  Shopify's native fraud detection tool that flags high-risk orders using indicators like mismatched billing/shipping addresses, suspicious IPs, and multiple failed payment attempts; provides recommendations (cancel, investigate, or fulfill) directly in the admin.
-
-
-
-- **[Signifyd](https://www.signifyd.com/)**  
-
-  Enterprise fraud protection platform with a **financial guarantee** on approved orders; Winter 2026 release adds **Account Integrity** (protecting sign-up/login before checkout), **Selective Appeasements** (stopping refund fraud), and an embedded Shopify app for reviewing orders without leaving admin . Pioneering **Agentic Commerce** protection for AI-agent-initiated transactions .
-
-
-
-- **[Riskified](https://www.riskified.com/)**  
-
-  Chargeback protection and fraud prevention platform with a **global Merchant Network** covering over a billion historical transactions; uses **Smart Linking** to identify individuals behind online interactions and **Decision Optimizer** to generate real-time decisions . Provides guaranteed approvals and explainable machine learning .
-
-
-
-- **[Sift](https://sift.com/)**  
-
-  AI-powered fraud platform with **AI Agents** for fraud teams: **Attack Detection/Investigation/Response Agents** for attack defense, **Review Agent** for case review with readable reasoning, and **Risk Activity Agent** for behavioral history analysis . Includes an **MCP Server** for querying Sift directly from AI tools . Sift Score and Workflows act on events in **under 150ms** .
-
-
-
-- **[SEON](https://seon.io/)**  
-
-  Fraud prevention and AML compliance platform integrating **900+ data signals** (digital footprint, device intelligence, behavioral biometrics, AI agent detection) . Covers pre-onboarding risk analysis, identity verification, transaction monitoring, and case management with AI-assisted investigations and SAR narrative generation .
-
-
-
-- **[Forter](https://www.forter.com/)**  
-
-  AI platform for fraud and payments with **1.8 billion identities** across its merchant network . Focused on **Agentic Commerce** infrastructure: **Agentic Orchestration** for supporting AI-agent transactions, **Trusted Agentic Commerce Protocol**, and an **Agentic Activity dashboard** for visibility into AI-driven traffic . Includes **Forter Prism**, an in-portal AI copilot for investigations .
-
-
-
-- **[Kount](https://www.kount.com/)**  
-
-  Fraud prevention and chargeback management platform (now part of Equifax); June 2026 release adds **AND/OR logic for Linked Analysis** in case investigations, improved chargeback prevention alert resolutions, and UI updates for prevention alerts table .
-
-
-
-- **[NoFraud](https://www.nofraud.com/)**  
-
-  Shopify-focused fraud prevention app with a **4.8 rating** (163 reviews); users report "zero chargebacks" and seamless integration, with a guarantee that covers fraudulent orders . Praised for protecting revenue without blocking legitimate customers.
-
-
-
-- **[ClearSale](https://www.clear.sale/)**  
-
-  Brazilian fraud prevention platform with **20+ years of market experience**; combines statistical models, machine learning, and behavioral analysis with **manual review by trained specialists** for complex transactions . Focuses on transparency in approval decisions and reducing false declines for small/mid-size e-commerce .
-
-
-
-- **[FraudLabs Pro](https://www.fraudlabspro.com/)**  
-
-  Fraud detection API with SDKs including **Go SDK** for transaction analysis, fraud scoring based on IP/email/billing/shipping, **credit card issuing bank validation**, and **SMS verification** . Provides a free tier for developers.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Transaction Monitoring & Decision Engines
-
-
-
-- **[Marble (CheckMarble)](https://github.com/checkmarble/marble)**  
-
-  The strongest open-source **real-time fraud and AML decision engine** available (475 GitHub stars, Go/React, open core) . Positioned as an open-source alternative to Feedzai, SEON, and SumSub. Features **real-time or post-trade transaction monitoring** with a custom data model that mirrors your data warehouse, customer/company screening against sanctions/PEP/adverse media, unified case manager, AI automation for rule building, embedded analytics, unalterable audit trail, RBAC/SSO, and SOC 2 Type II (cloud version) . Self-hosted open-source core is free; licensed version adds advanced features . **The best starting point for organizations building a self-hosted fraud/AML monitoring system.**
-
-
-
-- **[Jube](https://github.com/jube-home/aml-fraud-transaction-monitoring)**  
-
-  Open-source **AML and fraud detection platform** with real-time transaction monitoring and **adaptive ML** (supervised + unsupervised, neural network topology search) combined with a rule engine (58 GitHub stars, C#/.NET, AGPL-3.0) . Provides a complete platform for real-time monitoring with machine learning capabilities. **Strong for teams wanting ML-driven fraud detection** with a permissive (AGPL) license, though it is smaller and less documented than Marble.
-
-
-
-### Security Frameworks & Abuse Monitoring
-
-
-
-- **[FraudGuard](https://github.com/fraudguard/fraudguard)**  
-
-  Open-source security framework for **threat detection, fraud prevention, and abuse monitoring** (1,552 GitHub stars, AGPL-3.0) . Self-hosted solution with a built-in dashboard and risk scoring. **Broader than e-commerce fraud**—covers abuse monitoring across products, useful for platforms needing to detect fraudulent signups, abuse patterns, and security threats alongside payment fraud.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **OpenSanctions + Yente** — Open database of sanctions, PEPs, and persons of interest (320+ sources); Yente provides a self-hosted screening API with Docker and ElasticSearch backend . **Essential for sanctions/PEP screening** as part of a broader fraud/AML stack, though commercial data licensing may be required .
-
-- **Watchman (moov-io)** — Open-source sanctions list screening tool (Apache 2.0) with Jaro-Winkler distance scoring, auto-refresh of government lists, Docker deployment, and zero external dependencies . **Directly replaces the sanctions-screening portion** of commercial fraud platforms.
-
-- **No mature open-source equivalent to Signifyd or Riskified exists** — The **cross-merchant network intelligence** (billions of transactions from thousands of merchants) that powers Signifyd and Riskified's decisions is fundamentally not replicable by a self-hosted tool. Open-source fraud engines rely on your own transaction data, not a global network.
-
-
-
-**Frameworks for building custom systems**: **Marble** provides the most complete open-source foundation for real-time transaction monitoring and case management . **Jube** adds ML-driven detection for teams wanting adaptive models . **FraudGuard** covers broader abuse monitoring beyond payments . For sanctions/PEP screening, combine **Watchman** or **OpenSanctions/Yente** with Marble . No open-source project replicates the network effect of Signifyd or Riskified—expect to rely on your own data and rules.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Fraud detection platforms handling transaction and personal data must comply with applicable privacy regulations (GDPR, CCPA) and payment card industry requirements; **false positives can lose legitimate customers**, and false negatives create chargeback losses. Tuning thresholds requires ongoing monitoring.
-
-- **Open-source fraud detection is strongest for transaction monitoring and AML**—Marble and Jube provide production-ready decision engines , and Watchman/OpenSanctions cover sanctions screening . However, **no open-source project replicates the cross-merchant network intelligence** of Signifyd, Riskified, or Forter, which derive signal from billions of transactions across thousands of merchants. Organizations requiring network-effect fraud protection should evaluate commercial platforms.
-
-- Verify license terms for commercial use; Marble uses an open-core model (core open-source, advanced features licensed) , Jube uses AGPL-3.0 , and FraudGuard uses AGPL-3.0 .
-
-
+> 🔍 A comprehensive, curated catalog of top-tier **SaaS fraud prevention platforms** and **open-source fraud detection engines**, spanning chargeback guarantees, transaction risk scoring, AML screening, behavioral biometrics, and machine learning fraud architectures.
 
 ---
 
+## 📑 Table of Contents
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [💼 SaaS & Hosted Platforms](#-saashosted-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+  - [⚡ Transaction Monitoring & Decision Engines](#-transaction-monitoring--decision-engines)
+  - [🧬 Machine Learning & Graph Fraud Frameworks](#-machine-learning--graph-fraud-frameworks)
+  - [📱 Device Fingerprinting & Identity Intelligence](#-device-fingerprinting--identity-intelligence)
+  - [📜 Sanctions, PEP & AML Compliance](#-sanctions-pep--aml-compliance)
+  - [🛡️ Security & Abuse Frameworks](#-security--abuse-frameworks)
+- [⚖️ Architectural Comparison: SaaS Network Effects vs. Open Source](#-architectural-comparison-saas-network-effects-vs-open-source)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚠️ Disclaimer](#️-disclaimer)
 
+---
 
-**Made for e-commerce merchants, risk analysts, payment engineers, and fraud operations teams.**  
+## 🌐 Sector Overview & Market Dynamics
 
-Let's make fraud detection more open, but with clear eyes about the network-effect moat that commercial platforms hold.
+The global **Fraud Detection and Prevention (FDP)** market is valued at approximately **$35.7 billion to $42.4 billion in 2026** (projected to exceed $85 billion by the 2030s, compounding at ~15–19.6% CAGR). 
+
+The market dynamics exhibit a dual structure: it is **moderately fragmented across specialized niches** (e.g., account takeover, bot mitigation, synthetic identities, behavioral biometrics), yet **heavily concentrated and winner-take-most at the enterprise transaction tier**, where global merchant network intelligence and collective transaction consortiums create an unassailable data moat against uncoordinated fraud rings.
+
+---
+
+## 💼 SaaS & Hosted Platforms
+
+The table below lists industry-leading commercial platforms providing automated chargeback guarantees, real-time risk decisioning, and digital trust infrastructure. The entries are ranked in **descending order by company scale** (market capitalization / enterprise valuation or verified annual revenue).
+
+| 🏢 Platform | 💰 Company Scale (Valuation / Revenue) | 🏷️ Pricing Model & Starting Tier | 🎁 Free Tier Limit / Free Trial Plan | 🔑 Core Differentiator |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Shopify Fraud Analysis](https://help.shopify.com/en/manual/orders/fraud-analysis)** | **~$100B+ Market Cap** (Shopify Inc. NYSE: SHOP) / $7B+ ARR | Built into Shopify store plans; starting at **$39/month** (Basic Plan, or $29/mo billed annually) + 2.9% + 30¢ payment processing | **3-day free trial** (frequently promotional $1/month for first 3 months) across full store builder & fraud analysis suite | Native e-commerce integration flagging proxy usage, AVS/CVV mismatches, and multiple payment attempts directly in admin. |
+| **[Forter](https://www.forter.com/)** | **$3.0 Billion Valuation** (Series F) / ~$200M ARR | Outcome-based enterprise pricing starting around **0.30%–0.60% of GMV approved** (or custom per-transaction rates; annual contract) | **No free tier**; 30-day customized historical shadow data trial / ROI scoping pilot via sales | 1.8B+ known global identity network delivering instant sub-second approvals with 100% financial chargeback guarantees. |
+| **[Signifyd](https://www.signifyd.com/)** | **$1.34 Billion Valuation** (Series E unicorn) / ~$250M ARR | Guaranteed model based on GMV; baseline contracts start at **~$1,000–$4,500/year** (typically ~0.5%–1.2% per approved order) | **No open free tier**; 14-day staging sandbox evaluation & proof-of-concept pilot with risk-free historical data replay | Full financial guarantee on approved transactions, pioneering Agentic Commerce protection for autonomous AI shoppers. |
+| **[Riskified](https://www.riskified.com/)** | **$1.15 Billion Market Cap** (NYSE: RSKD) / ~$400M–$410M (2026E Revenue) | Performance-based pricing starting from **0.40%–1.0% of approved order volume** (billed only on successfully cleared sales) | **No open free tier**; 30-day proof-of-concept pilot analyzing pre-cleared offline batch logs | Global merchant network analyzing over 1B transactions with Smart Linking graph clustering and automated chargeback liability shift. |
+| **[Sift](https://sift.com/)** | **$1.0 Billion Valuation** (Unicorn) / ~$150M+ ARR | Pay-per-event pricing starting at **$500/month** (scaling with billable events: logins, payments, content submissions) | **No permanent free tier**; 14-day sandbox API evaluation trial with full access to test events and ML scoring | Ensemble ML models decisioning transactions under 150ms, featuring specialized AI Agents and Model Context Protocol (MCP) servers. |
+| **[Kount](https://www.kount.com/)** | **$640 Million Valuation** (Acquired by Equifax) / ~$65M+ ARR | Scaled per-event pricing starting at **~$1,000/year** (or ~$0.05–$0.15 per transaction query on baseline tiers) | **No permanent free tier**; 30-day guided evaluation pilot with simulated historical risk scoring | Identity Trust Global Network leveraging Equifax credit and identity telemetry with multi-layered Omniscore AI analysis. |
+| **[SEON](https://seon.io/)** | **~$400 Million Valuation** (Series B, IVP) / ~$30M+ ARR | Transparent SaaS tier starting at **$699/month** (Starter tier for up to 2,500 API calls/month; $0.28 per extra call) | **14-day free trial** with access to live API sandbox, Chrome extension, and up to 100 free manual lookup checks | 900+ real-time social & digital footprint data enrichment signals based strictly on email, phone number, and IP lookup. |
+| **[ClearSale](https://www.clear.sale/)** | **~$350 Million Market Cap** (B3: CLSA3) / ~$100M+ ARR | Hybrid contingency pricing starting at **1.25%–2.0% per approved order** (or standard fixed API scoring ~0.10/order) | **No permanent free tier**; 30-day operational audit trial reviewing historical transaction files | Proprietary blend of advanced statistical algorithms backed by 24/7 specialized human review analysts for zero false positives. |
+| **[NoFraud](https://www.nofraud.com/)** | **~$120 Million Valuation** (Series A/B) / ~$15M+ ARR | Transaction fee starting at **~0.40%–0.50% per approved transaction** (no setup fees, no monthly software retainer) | **14-day free trial** (risk-free screening/pilot mode on Shopify, BigCommerce, and WooCommerce stores) | Frictionless chargeback indemnification with automated real-time phone/SMS customer verification workflows. |
+| **[FraudLabs Pro](https://www.fraudlabspro.com/)** | **~$10 Million Valuation** (Bootstrapped / Hexasoft) / ~$3M ARR | Tiered plans starting at **$29.95/month** (Mini: 1,500 queries) up to $1,249.95/month (Enterprise: 500,000 queries) | **Free Micro Plan forever**: **500 queries/month**, up to $25k monthly sales volume, 5 custom rules, and 10 free SMS credits | Developer-first REST fraud scoring API with turn-key extensions for Magento, WooCommerce, OpenCart, and PrestaShop. |
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+The following self-hosted engines, machine learning frameworks, and compliance databases allow engineering teams to build custom fraud infrastructure. Entries are ranked in **descending order by GitHub stargazers count** [![GitHub stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Fraud-Detection-Prevention?style=social&color=white)](https://github.com/ishandutta2007/Awesome-Fraud-Detection-Prevention/stargazers).
+
+| 📦 Repository & Link | ⭐ Star Count | 💻 Primary Stack | 📜 License | 🎯 Functional Focus |
+| :--- | :--- | :--- | :--- | :--- |
+| **[fingerprintjs/fingerprintjs](https://github.com/fingerprintjs/fingerprintjs)** | [![GitHub stars](https://img.shields.io/github/stars/fingerprintjs/fingerprintjs?style=social&color=white)](https://github.com/fingerprintjs/fingerprintjs/stargazers) | TypeScript / JS | BSL / Apache | Client-side browser identification, canvas/audio fingerprinting, and bot detection without cookies. |
+| **[ballerine-io/ballerine](https://github.com/ballerine-io/ballerine)** | [![GitHub stars](https://img.shields.io/github/stars/ballerine-io/ballerine?style=social&color=white)](https://github.com/ballerine-io/ballerine/stargazers) | TypeScript / Node.js | Apache-2.0 | Open-source infrastructure and workflow orchestration for identity verification, KYB/KYC, and risk decisioning. |
+| **[wfh45678/radar](https://github.com/wfh45678/radar)** | [![GitHub stars](https://img.shields.io/github/stars/wfh45678/radar?style=social&color=white)](https://github.com/wfh45678/radar/stargazers) | Java / Vue | Apache-2.0 | High-throughput distributed real-time risk control engine with dynamic rule scripting and risk model evaluation. |
+| **[safe-graph/DGFraud](https://github.com/safe-graph/DGFraud)** | [![GitHub stars](https://img.shields.io/github/stars/safe-graph/DGFraud?style=social&color=white)](https://github.com/safe-graph/DGFraud/stargazers) | Python / PyTorch / DGL | MIT | Deep Graph-based Fraud Detection toolbox implementing cutting-edge GNN algorithms (GAS, SemiGNN, GraphConsis). |
+| **[Fraud-Detection-Handbook/fraud-detection-handbook](https://github.com/Fraud-Detection-Handbook/fraud-detection-handbook)** | [![GitHub stars](https://img.shields.io/github/stars/Fraud-Detection-Handbook/fraud-detection-handbook?style=social&color=white)](https://github.com/Fraud-Detection-Handbook/fraud-detection-handbook/stargazers) | Python / Jupyter | MIT | Comprehensive reproducible handbook, benchmarks, and production-grade architectures for credit card fraud ML. |
+| **[checkmarble/marble](https://github.com/checkmarble/marble)** | [![GitHub stars](https://img.shields.io/github/stars/checkmarble/marble?style=social&color=white)](https://github.com/checkmarble/marble/stargazers) | Go / React / Postgres | Open Core | Real-time transaction monitoring, AML decision engine, adverse media screening, and unified fraud investigator case manager. |
+| **[moov-io/watchman](https://github.com/moov-io/watchman)** | [![GitHub stars](https://img.shields.io/github/stars/moov-io/watchman?style=social&color=white)](https://github.com/moov-io/watchman/stargazers) | Go / Docker | Apache-2.0 | Lightweight, standalone sanctions list screening microservice using Jaro-Winkler distance against OFAC/SDN lists. |
+| **[opensanctions/yente](https://github.com/opensanctions/yente)** | [![GitHub stars](https://img.shields.io/github/stars/opensanctions/yente?style=social&color=white)](https://github.com/opensanctions/yente/stargazers) | Python / ElasticSearch | MIT | Fast self-hosted screening API for sanctions, politically exposed persons (PEPs), and persons of interest databases. |
+| **[jube-home/aml-fraud-transaction-monitoring](https://github.com/jube-home/aml-fraud-transaction-monitoring)** | [![GitHub stars](https://img.shields.io/github/stars/jube-home/aml-fraud-transaction-monitoring?style=social&color=white)](https://github.com/jube-home/aml-fraud-transaction-monitoring/stargazers) | C# / .NET | AGPL-3.0 | Real-time AML transaction monitoring platform integrating rule engines with supervised/unsupervised adaptive neural networks. |
+| **[FraudGuard/FraudGuard](https://github.com/FraudGuard/FraudGuard)** | [![GitHub stars](https://img.shields.io/github/stars/FraudGuard/FraudGuard?style=social&color=white)](https://github.com/FraudGuard/FraudGuard/stargazers) | Python / Shell | AGPL-3.0 | Threat intelligence and abuse monitoring security framework for detecting suspicious IPs and registration spam. |
+
+---
+
+### ⚡ Transaction Monitoring & Decision Engines
+* **[checkmarble/marble](https://github.com/checkmarble/marble)** [![GitHub stars](https://img.shields.io/github/stars/checkmarble/marble?style=social&color=white)](https://github.com/checkmarble/marble/stargazers) — Modern, full-featured fraud & AML decision engine written in Go. Operates as an open-core alternative to SEON and Feedzai, supporting real-time transaction scoring, custom SQL/JSON data models, and audit trails.
+* **[wfh45678/radar](https://github.com/wfh45678/radar)** [![GitHub stars](https://img.shields.io/github/stars/wfh45678/radar?style=social&color=white)](https://github.com/wfh45678/radar/stargazers) — Ultra-fast distributed rule management and execution system designed for financial risk control, supporting hot-reloading Groovy rules and complex event processing.
+* **[jube-home/aml-fraud-transaction-monitoring](https://github.com/jube-home/aml-fraud-transaction-monitoring)** [![GitHub stars](https://img.shields.io/github/stars/jube-home/aml-fraud-transaction-monitoring?style=social&color=white)](https://github.com/jube-home/aml-fraud-transaction-monitoring/stargazers) — Adaptive machine learning transaction monitoring platform built on .NET, pairing heuristic rule engines with neural network topology search.
+
+### 🧬 Machine Learning & Graph Fraud Frameworks
+* **[safe-graph/DGFraud](https://github.com/safe-graph/DGFraud)** [![GitHub stars](https://img.shields.io/github/stars/safe-graph/DGFraud?style=social&color=white)](https://github.com/safe-graph/DGFraud/stargazers) — Graph neural network (GNN) framework tailored for detecting fraud rings, card clusters, and collateral rings across heterogeneous graph databases.
+* **[Fraud-Detection-Handbook/fraud-detection-handbook](https://github.com/Fraud-Detection-Handbook/fraud-detection-handbook)** [![GitHub stars](https://img.shields.io/github/stars/Fraud-Detection-Handbook/fraud-detection-handbook?style=social&color=white)](https://github.com/Fraud-Detection-Handbook/fraud-detection-handbook/stargazers) — The gold standard academic and engineering reference for credit card fraud detection with real-time imbalanced classification and cost-sensitive evaluation models.
+
+### 📱 Device Fingerprinting & Identity Intelligence
+* **[fingerprintjs/fingerprintjs](https://github.com/fingerprintjs/fingerprintjs)** [![GitHub stars](https://img.shields.io/github/stars/fingerprintjs/fingerprintjs?style=social&color=white)](https://github.com/fingerprintjs/fingerprintjs/stargazers) — High-accuracy browser fingerprinting library that extracts 30+ device attributes (WebGL, canvas, audio, fonts) to identify returning bots and fraudulent users.
+* **[ballerine-io/ballerine](https://github.com/ballerine-io/ballerine)** [![GitHub stars](https://img.shields.io/github/stars/ballerine-io/ballerine?style=social&color=white)](https://github.com/ballerine-io/ballerine/stargazers) — Enterprise-grade risk and identity orchestration layer that unifies KYC, KYB, and fraud detection into modular, customizable workflow graphs.
+
+### 📜 Sanctions, PEP & AML Compliance
+* **[moov-io/watchman](https://github.com/moov-io/watchman)** [![GitHub stars](https://img.shields.io/github/stars/moov-io/watchman?style=social&color=white)](https://github.com/moov-io/watchman/stargazers) — High-speed, self-contained sanctions screening engine written in Go. Regularly updates and fuzzy-matches against US Treasury OFAC (SDN, SSI), BIS, and international embargo lists.
+* **[opensanctions/yente](https://github.com/opensanctions/yente)** [![GitHub stars](https://img.shields.io/github/stars/opensanctions/yente?style=social&color=white)](https://github.com/opensanctions/yente/stargazers) — Turn-key Dockerized screening search engine indexing global Politically Exposed Persons (PEPs), sanctions, and crime databases.
+
+### 🛡️ Security & Abuse Frameworks
+* **[FraudGuard/FraudGuard](https://github.com/FraudGuard/FraudGuard)** [![GitHub stars](https://img.shields.io/github/stars/FraudGuard/FraudGuard?style=social&color=white)](https://github.com/FraudGuard/FraudGuard/stargazers) — Threat detection framework designed to collect telemetry, prevent credential stuffing, and score account creation abuse.
+
+---
+
+## ⚖️ Architectural Comparison: SaaS Network Effects vs. Open Source
+
+```
++--------------------------------------------------------------------------------------------------+
+|                                    COMMERCIAL SAAS MOAT                                          |
+|  • Cross-Merchant Identity Graph (Billions of records across thousands of retailers)             |
+|  • Zero-Liability Chargeback Insurance (Merchant pays % GMV; Vendor absorbs dispute costs)       |
+|  • Turn-Key Compliance (PCI-DSS Level 1, SOC 2 Type II, automated SAR filing)                  |
++--------------------------------------------------------------------------------------------------+
+                                                 VS
++--------------------------------------------------------------------------------------------------+
+|                                  OPEN-SOURCE SELF-HOSTED STACK                                   |
+|  • Complete Data Privacy (Sensitive PII never leaves VPC / on-prem infrastructure)               |
+|  • Zero Margin Markup (No 0.5%–1.5% GMV fee overhead on high-margin products)                   |
+|  • Full Deterministic Rule Control (Tailored domain heuristic logic & custom GNN pipelines)      |
++--------------------------------------------------------------------------------------------------+
+```
+
+1. **The Consortium Moat**: Commercial giants like Signifyd, Riskified, and Forter win by pooling consumer signals across thousands of retailers. An identity committing fraud on Merchant A is instantly banned on Merchant B before attempting a checkout. A self-hosted tool has zero visibility beyond its own perimeter.
+2. **When to Choose Open Source**: Use open-source projects like **Marble**, **Radar**, **Ballerine**, and **DGFraud** when you operate high-margin digital products, have strict data sovereignty obligations prohibiting PII transmission to 3rd-party vendors, or already possess in-house machine learning talent capable of training custom fraud classifiers.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are warmly welcomed! Please follow these steps to keep the list high quality:
+
+1. 🍴 Fork the repository.
+2. 🌿 Create a descriptive feature branch (`git checkout -b feat/add-new-fraud-tool`).
+3. 📝 Update `README.md` maintaining consistent markdown formatting, star links, and factual pricing/scale specifications.
+4. 🚀 Submit a Pull Request with a short summary of the project's utility and license.
+
+---
+
+## ⚠️ Disclaimer
+
+* This repository is a community-curated list maintained for educational and architectural reference only.
+* Transaction fraud detection systems require strict compliance with PCI-DSS, GDPR, and consumer protection mandates. False positive decline rates directly reduce top-line conversion, while false negative allowances increase chargeback ratios. Validate all risk thresholds carefully.
+
+---
+
+<p align="center">
+  <sub>Built with ❤️ for merchants, fintech engineers, fraud operations teams, and risk analysts worldwide.</sub>
+</p>

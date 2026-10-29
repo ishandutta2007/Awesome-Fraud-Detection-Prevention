@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e113a" />
+    </linearGradient>
+
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+
+    <linearGradient id="accent-shield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="glow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Filters for Glow and Shadow -->
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+
+    <!-- Scanning Radar Grid Pattern -->
+    <pattern id="radar-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(56, 189, 248, 0.07)" stroke-width="1" />
+    </pattern>
+
+    <!-- Embedded Dynamic Animations -->
+    <style>
+      .glow-pulse {
+        animation: pulse 4s ease-in-out infinite;
+      }
+      .scan-line {
+        animation: scan 6s linear infinite;
+      }
+      .node-pulse {
+        animation: nodeBlink 3s ease-in-out infinite alternate;
+      }
+      .card-float-1 {
+        animation: float1 5s ease-in-out infinite alternate;
+      }
+      .card-float-2 {
+        animation: float2 6s ease-in-out infinite alternate;
+      }
+      .card-float-3 {
+        animation: float3 5.5s ease-in-out infinite alternate;
+      }
+      .data-flow {
+        stroke-dasharray: 8, 8;
+        animation: flow 20s linear infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.65; transform: scale(1.04); }
+      }
+      @keyframes scan {
+        0% { transform: translateY(-50px); opacity: 0; }
+        15% { opacity: 0.8; }
+        85% { opacity: 0.8; }
+        100% { transform: translateY(370px); opacity: 0; }
+      }
+      @keyframes nodeBlink {
+        0% { opacity: 0.4; r: 3px; }
+        100% { opacity: 1; r: 5px; }
+      }
+      @keyframes float1 {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-8px); }
+      }
+      @keyframes float2 {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(9px); }
+      }
+      @keyframes float3 {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-6px); }
+      }
+      @keyframes flow {
+        from { stroke-dashoffset: 400; }
+        to { stroke-dashoffset: 0; }
+      }
+    </style>
+  </defs>
+
+  <!-- Deep Background -->
+  <rect width="1200" height="360" fill="url(#bg-grad)" rx="16" />
+
+  <!-- Grid Overlay -->
+  <rect width="1200" height="360" fill="url(#radar-grid)" rx="16" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="200" cy="80" r="140" fill="#38bdf8" opacity="0.12" filter="url(#neon-glow)" class="glow-pulse" />
+  <circle cx="1020" cy="280" r="180" fill="#8b5cf6" opacity="0.15" filter="url(#neon-glow)" class="glow-pulse" style="animation-delay: 2s;" />
+
+  <!-- Animated Data Flow Lines (Dynamic Background Paths) -->
+  <path d="M 0 100 Q 300 140 600 70 T 1200 110" fill="none" stroke="rgba(56, 189, 248, 0.25)" stroke-width="2" class="data-flow" />
+  <path d="M 0 260 Q 400 200 800 270 T 1200 240" fill="none" stroke="rgba(139, 92, 246, 0.2)" stroke-width="2" class="data-flow" style="animation-direction: reverse;" />
+
+  <!-- Radar Scanning Effect (Clipped to background) -->
+  <g opacity="0.6">
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="url(#glow-grad)" stroke-width="2" class="scan-line" filter="url(#neon-glow)" />
+  </g>
+
+  <!-- Floating Dynamic Feature Badges / Visual Nodes -->
+  <!-- Left Side Badges -->
+  <g class="card-float-1" transform="translate(60, 65)">
+    <rect width="195" height="42" rx="21" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2" filter="url(#card-shadow)" />
+    <circle cx="22" cy="21" r="5" fill="#34d399" class="node-pulse" />
+    <text x="36" y="26" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.4">🛡️ Real-time Risk Scoring</text>
+  </g>
+
+  <g class="card-float-2" transform="translate(45, 255)">
+    <rect width="215" height="42" rx="21" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(139, 92, 246, 0.4)" stroke-width="1.2" filter="url(#card-shadow)" />
+    <circle cx="22" cy="21" r="5" fill="#38bdf8" class="node-pulse" style="animation-delay: 1s;" />
+    <text x="36" y="26" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.4">⚡ Zero-Chargeback SLA</text>
+  </g>
+
+  <!-- Right Side Badges -->
+  <g class="card-float-3" transform="translate(940, 70)">
+    <rect width="200" height="42" rx="21" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(52, 211, 153, 0.4)" stroke-width="1.2" filter="url(#card-shadow)" />
+    <circle cx="22" cy="21" r="5" fill="#a78bfa" class="node-pulse" style="animation-delay: 1.5s;" />
+    <text x="36" y="26" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.4">🤖 AML &amp; Graph Engines</text>
+  </g>
+
+  <g class="card-float-1" transform="translate(930, 255)">
+    <rect width="210" height="42" rx="21" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(244, 114, 182, 0.4)" stroke-width="1.2" filter="url(#card-shadow)" />
+    <circle cx="22" cy="21" r="5" fill="#f43f5e" class="node-pulse" style="animation-delay: 0.7s;" />
+    <text x="36" y="26" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.4">🔍 Behavioral Fingerprint</text>
+  </g>
+
+  <!-- Center Decorative Shield Icon (Foreground/Behind Title) -->
+  <g transform="translate(565, 42)">
+    <path d="M 35 0 L 68 14 C 68 45 52 68 35 80 C 18 68 2 45 2 14 Z" fill="url(#accent-shield)" opacity="0.9" filter="url(#neon-glow)" />
+    <path d="M 35 12 L 58 22 C 58 46 45 62 35 70 C 25 62 12 46 12 22 Z" fill="#0f172a" opacity="0.85" />
+    <!-- Checkmark inside Shield -->
+    <path d="M 24 38 L 32 46 L 47 30" fill="none" stroke="#38bdf8" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Foreground Main Title and Subtitle (Crisp, High Contrast, Centered) -->
+  <g text-anchor="middle">
+    <!-- Tagline Pill -->
+    <rect x="440" y="132" width="320" height="26" rx="13" fill="rgba(37, 99, 235, 0.25)" stroke="rgba(56, 189, 248, 0.5)" stroke-width="1" />
+    <text x="600" y="149" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.5">CURATED ECOSYSTEM • SAAS &amp; OPEN SOURCE</text>
+
+    <!-- Main Title -->
+    <text x="600" y="200" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="37" font-weight="800" letter-spacing="-0.5" filter="url(#card-shadow)">
+      Awesome Fraud Detection &amp; Prevention
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="235" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0.2">
+      Enterprise Chargeback Protection, Transaction Risk Scoring &amp; Self-Hosted AML Engines
+    </text>
+
+    <!-- Tech Stack / Category Indicators -->
+    <text x="600" y="300" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" letter-spacing="0.5">
+      <tspan fill="#38bdf8">E-Commerce Security</tspan> • 
+      <tspan fill="#a78bfa">Graph Analytics</tspan> • 
+      <tspan fill="#34d399">Device Intelligence</tspan> • 
+      <tspan fill="#fb7185">Sanctions &amp; AML Screening</tspan>
+    </text>
+  </g>
+
+  <!-- Border Outline -->
+  <rect x="1" y="1" width="1198" height="358" rx="15" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+</svg>
